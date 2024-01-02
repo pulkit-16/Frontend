@@ -1,0 +1,40 @@
+Q1. why console.log( movies) print this-> [] , when use inside useEffect?
+Sol.
+When you call setMovies(response.data.results), it doesn't immediately update the state. Therefore, when you log movies immediately after calling setMovies, you're logging the state before it's been updated.
+
+In your useEffect, you're making an asynchronous call to fetch data, and only after the data is fetched, the state is updated. Meanwhile, your console.log(movies) executes immediately after the API call is initiated, not after it's completed. At that point, movies likely still holds its initial value, wh
+
+
+Q2. why used useState for movies,setmovies?
+Sol.
+As data fetch from api (response.data.results ) is[] so we need to display the array hence for that we need to change the state so we used map() for it n setMovies inside axios to update the next state of the movie
+
+
+Q3.   <div onClick={onNextProp} className=" text-xl m2 p-2 border-2 rounded-r-2xl border-l-0 border-blue-400"> onNextProp is prop here and is function ,it is implemented directly,why?
+but
+<div className="bg-gray-900 text-2xl absolute right-0 top-0 rounded-xl">
+                <div onClick={addToWatchList(movie.id)}>
+                  😍
+                </div> Here, onClick dont work directly why?
+
+Sol.
+In my case, directly passing the function reference should work fine, as long as onPrevProp and onNextProp are correctly implemented and provided as PROPS
+
+In cases where you need to pass arguments or perform asynchronous operations. In such cases, wrapping the function call in an arrow function OR using bind is the preferred approach to ensure that the function is called only when the event occurs.
+
+
+
+Q4.  <input
+          type="text"
+          className=" bg-gray-200 border-4 text-center p-1 m-2"
+          placeholder="Search for Movies"
+           value={searchStr}
+          onChange={(e)=> setSearchStr(e.target.value)}
+        />
+
+        why value here?
+
+    Sol.
+    1.Controlled Components: In controlled components, the value of the input field is controlled by React state. This means that you explicitly set the value of the input field using the value attribute, and you provide an onChange event handler to update the state when the input value changes. This approach allows you to have more control over the input value and perform validation or other operations on it.
+
+    2.Uncontrolled Components: In uncontrolled components, the value of the input field is managed by the DOM itself. You don't need to set the value using the value attribute, and you don't necessarily need an onChange event handler to track changes. Instead, you can rely on DOM methods and properties to access the current value of the input field when needed. This approach can be simpler for basic forms without much logic or validation requirements.
