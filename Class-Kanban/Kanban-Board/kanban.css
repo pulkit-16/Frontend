@@ -1,0 +1,157 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  
+}
+.toolbox-cont{
+  height: 5rem;
+  background-color: rgb(163, 151, 151);
+  display: flex;
+  align-items: center;
+}
+
+.toolbox-priority-cont{
+  height: 3.5rem;
+  width: 18rem;
+  background-color: rgb(97, 91, 91);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.toolbox-priority-cont>*:hover{
+  background-color: #485460;
+}
+
+.toolbox-cont>*{
+  margin-left: 9rem;
+}
+
+.color{
+  height: 1.5rem;
+  width: 3rem;
+  border:solid rgb(89, 0, 255);
+ 
+}
+.lightpink{
+  background-color: lightpink;
+}
+.lightgreen{
+  background-color: lightgreen;
+}
+.lightblue{
+  background-color: rgb(136, 201, 223);
+}
+.black{
+  background-color: black;
+}
+.action-btn-cont{
+  height: 3.5rem;
+  width: 8rem;
+  background-color: rgb(97, 91, 91) ;
+  display: flex;
+  
+}
+.action-btn-cont > *{
+   
+    display: flex;
+    width: 50%;
+    font-size: 2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+  .add-btn:hover{
+    background-color: rgb(182, 252, 182);
+  }
+  .remove-btn:hover{
+    background-color: rgb(182, 252, 182);
+  }
+
+
+
+  .main-cont{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap; 
+     /* flex wrap make the new ticket vertically rather going as horizontally */
+  }
+  .ticket-cont{
+    height: 12rem;
+    width: 15rem;
+    background-color: coral;
+  }
+  .ticket-color{
+    height: 1rem;
+   
+  }
+
+  .ticket-id{
+    background-color: yellow;
+    height: 2rem;
+  }
+
+  .ticket-lock{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 98px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+  }
+
+
+  
+  .modal-cont{
+    height: 50vh;
+    width: 45vw;
+    display: flex;
+    background-color: lightsalmon;
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    display: none;
+   
+  }
+  
+  .textArea-cont{
+    height: 100%;
+    width: 75%;
+    resize: none;
+    outline:none ;
+    border:none;
+    font-size: 2rem;
+    color: black;
+    background-color:  #dfe4ea
+  }
+
+  .priority-colors-container{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(53, 54, 54);;
+  }
+  .priority-color{
+    height: 3.2rem  ;
+    width: 5.3rem ;
+    text-align:center;
+    font-style:italic;
+    color : rgb(216, 0, 0);
+    padding:10px;
+    border:solid black
+  }
+  .active{
+    border: 5px solid rgb(233, 120, 75)
+  
+  }
+  body{
+    
+    background-color: rgb(128, 7, 134);
+  }
